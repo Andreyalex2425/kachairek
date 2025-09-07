@@ -1,0 +1,23 @@
+(function(){
+  const allowedHost = "shoroburaproschool.ru"; // 👉 замени на свой домен
+  if (location.hostname.includes(allowedHost)) {
+    const css = `
+      :root {
+        --accent-color: #dac398;
+        --extra-color: #bfa77e;
+      }
+      body {
+        background: var(--accent-color);
+      }
+      .my-button {
+        background: var(--extra-color);
+        color: #111;
+        padding: 10px 16px;
+        border-radius: 8px;
+      }
+    `;
+    const style = document.createElement("style");
+    style.textContent = css;
+    document.head.appendChild(style);
+  }
+})();
